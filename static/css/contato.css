@@ -1,0 +1,98 @@
+.contato-container {
+  background-color: #fdf9fc;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+.contato-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-contato {
+  font-size: 2.2rem;
+  color: #f16262;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.titulo-contato i {
+  margin-right: 8px;
+}
+
+.texto-contato {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-contato label {
+  font-weight: bold;
+  color: #444;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  
+
+}
+
+.formulario-contato textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.formulario-contato button {
+  background-color: #6b0707;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formulario-contato button:hover {
+  background-color: #8f0606;
+}
+
+/* RESPONSIVIDADE main */
+@media (max-width: 768px) {
+
+  .contato-container {
+    max-width: 400px;
+    max-height: auto;
+
+  }
+
+  .titulo-contato {
+    font-size: 1.4rem;
+  }
+
+  .texto-contato {
+  font-size: 1rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+}

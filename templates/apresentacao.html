@@ -1,0 +1,33 @@
+{% extends "base/base.html" %}
+{% block titulo %}Apresentação pessoal - Senac{% endblock %}
+{% block corpo %}
+{% block css_pagina %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/apresentacao.css') }}">
+{% endblock %}<main>
+  <section class="content-section">
+    <div class="titulo-apresentacao">
+      <img src="{{ url_for('static', filename='imagens/WhatsApp Image 2025-06-22 at 1.50.51 PM (1).jpeg') }}"
+        alt="Foto pessoal" class="icone">
+      <h1 class="main-title">Apresentação Pessoal</h1>
+    </div>
+    <p class="lead-text">Oi! Eu sou a <strong>Ana Ludmila</strong>, tenho 18 anos e faço parte da criação da
+      <strong>Aliança Aurora</strong>, um projeto feito com muito carinho e propósito.
+    </p>
+
+    <p>Desde nova, percebi como ser mulher em muitos espaços, principalmente online nem sempre é fácil. A gente
+      escuta coisas que não deveria, é ignorada ou subestimada. Isso sempre me incomodou.</p>
+
+    <p>Foi daí que surgiu a vontade de ajudar a criar algo diferente: um lugar onde mulheres se sintam seguras,
+      bem-vindas e com espaço para crescer e se conectar com outras que passam por coisas parecidas.</p>
+
+    <p>Nas horas vagas, eu gosto de jogar, treinar, ouvir música, ler, assistir filmes e passar tempo com a minha
+      família. Essas coisas simples também fazem parte de quem eu sou.</p>
+
+    <p>Com a Aliança Aurora, quero fazer parte de uma mudança, mesmo que pequena. Ajudando outras mulheres a se
+      sentirem mais confiantes, respeitadas e livres para ser quem são.</p>
+
+    <a href="https://mail.google.com/mail/u/0/?fs=1&to=ludmilalopes416@gmail.com&tf=cm" target="_blank"
+      class="btn-primary">Fale comigo!!</a>
+  </section>
+</main>
+{% endblock %}

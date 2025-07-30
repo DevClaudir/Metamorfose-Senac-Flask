@@ -1,0 +1,283 @@
+/* Container que envolve feed e sugestões */
+.layout-feed {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* permite quebra em telas pequenas */
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+/* Feed principal */
+#feed {
+    width: 600px;
+    background-color: var(--menu-bg-color);
+    min-height: 980px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+
+    /* Remove margens fixas que causam problemas */
+    margin: 0;
+}
+
+.post-insta {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.topo-post {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+}
+
+.avatar-insta {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nome-usuario-insta {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #2c2c2c;
+}
+
+.midia-insta {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+}
+
+.acoes-insta {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.acoes-insta span:hover {
+    color: #7E7199;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.acoes-insta .container {
+    margin-left: auto;
+}
+
+/*------ reações da publicação ------*/
+/* CURTIR */
+.heart input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.heart {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.heart svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    transition: all 0.3s;
+    fill: #666;
+}
+
+.heart input:checked~svg {
+    fill: #E3474F;
+}
+
+/* COMENTAR */
+.comentario-icone button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.icone-comentario {
+    transition: transform 0.3s ease, stroke 0.3s ease;
+    stroke: black;
+    width: 35px;
+    height: 39px;
+}
+
+.icone-comentario:hover {
+    /* aumenta o ícone */
+    stroke: rgb(199, 29, 29);
+    /* cor azul no hover */
+}
+
+/* COMPARTILHAR */
+.send-icon {
+    font-size: 25px;
+    color: #f37272;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.send-icon:hover {
+    color: rgb(223, 43, 43);
+    /* Roxo mais escuro ao passar o mouse (opcional) */
+}
+
+/* SALVAR */
+.salvar {
+    --color: #a5a5b0;
+    --size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.salvar .save-regular {
+    position: absolute;
+    animation: keyframes-fill .5s;
+    transform-origin: top;
+}
+
+.salvar .save-solid {
+    position: absolute;
+    animation: keyframes-fill .5s;
+    display: none;
+    transform-origin: top;
+}
+
+/* ------ On check event ------ */
+.salvar input:checked~.save-regular {
+    display: none;
+}
+
+.salvar input:checked~.save-solid {
+    display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.salvar input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scaleY(1.2);
+    }
+}
+
+.descricao-post {
+    padding: 0 12px 12px 12px;
+    font-size: 0.95rem;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Caixa lateral de sugestões */
+.sugestoes-lateral {
+    width: 350px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    height: fit-content;
+
+    /* Remove margens fixas que causam problemas */
+    margin: 0;
+}
+
+.sugestoes-lateral h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sugestao-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+
+}
+
+.avatar-sugestao {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nome-sugestao {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 0.95rem;
+    color: #222;
+}
+
+.botao-seguir {
+    background-color: transparent;
+    color: #f16262;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.botao-seguir:hover {
+    color: rgb(206, 39, 39);
+}

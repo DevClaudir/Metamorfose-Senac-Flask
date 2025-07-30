@@ -1,0 +1,19 @@
+{% extends "base/base.html" %}
+{% block titulo %}Chat - Aliança Aurora{% endblock %}
+{% block corpo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/chat.css') }}">
+<main>
+    <section class="chat-container">
+        <div class="chat-header">Atendimento com Psicólogo</div>
+        <div class="chat-box" id="chatBox">
+            <div class="mensagem psicologo">Olá, como você está se sentindo hoje?</div>
+            <div class="mensagem usuario">Estou bem!</div>
+            <!-- novas mensagens serão inseridas aqui -->
+        </div>
+        <form class="chat-input" id="chatForm">
+            <input type="text" placeholder="Digite sua mensagem..." id="userMessage" required>
+            <button type="submit" id="sendButton">Enviar</button>
+        </form>
+    </section>
+</main>
+{% endblock %}

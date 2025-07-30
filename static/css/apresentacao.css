@@ -1,0 +1,82 @@
+/*página apresentação Pessoal */
+main {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.content-section {
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.titulo-apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.icone {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #f16262;
+  box-shadow: 4px 6px 12px rgb(107, 7, 7);
+}
+
+.main-title {
+  font-size: 2rem;
+  color: #f37272;
+  margin: 0;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 25px;
+  background-color: rgb(184, 29, 29);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgb(107, 7, 7);
+}
+
+/* RESPONSIVIDADE main */
+@media (max-width: 768px) {
+
+  .content-section {
+    width: 380px;
+    height: 100%;
+
+  }
+
+  .main-title {
+    font-size: 1rem;
+  }
+
+  .lead-text {
+    font-size: 0.5rem;
+
+  }
+
+  .icone {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #f16262;
+    box-shadow: 4px 6px 12px rgb(107, 7, 7);
+  }
+}

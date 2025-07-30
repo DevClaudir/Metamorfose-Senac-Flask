@@ -1,0 +1,147 @@
+{% extends "base/base.html" %}
+{% block titulo %}Feed - Aliança Aurora{% endblock %}
+{% block corpo %}
+{% block css_pagina %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/feed.css') }}">
+{% endblock %}
+
+<main>
+  <!-- FEED + SUGESTÕES -->
+  <div class="layout-feed">
+    <section id="feed">
+      <!-- Primeiro post -->
+      <div class="post-insta">
+        <div class="topo-post">
+          <img src="{{ url_for('static', filename='Fotos/perfil1.jpg') }}" class="avatar-insta" alt="Avatar do usuário">
+          <span class="nome-usuario-insta">joao_silva</span>
+        </div>
+        <img src="{{ url_for('static', filename='ImagensPublicacoes/foto1.jpg') }}" class="midia-insta"
+          alt="Imagem do post">
+        <div class="acoes-insta">
+          <span>
+            <label class="heart">
+              <input type="checkbox">
+              <svg id="Layer_1" version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
+          </span>
+          <span class="comentario-icone">
+            <button>
+              <svg stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" height="44" width="44" xmlns="http://www.w3.org/2000/svg" class="icone-comentario"
+                fill="none">
+                <path fill="none" d="M0 0h24v24H0z" stroke="none"></path>
+                <path d="M8 9h8"></path>
+                <path d="M8 13h6"></path>
+                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z">
+                </path>
+              </svg>
+            </button>
+          </span>
+          <div class="send-icon"><i class="fas fa-paper-plane"></i></div>
+          <span class="container">
+            <label class="salvar">
+              <input type="checkbox" checked="checked">
+              <svg class="save-regular" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                <path
+                  d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z">
+                </path>
+              </svg>
+              <svg class="save-solid" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                <path
+                  d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z">
+                </path>
+              </svg>
+            </label>
+          </span>
+        </div>
+        <div class="descricao-post">
+          <span class="nome-usuario-insta">joao_silva</span>
+          <span>Enfim, formados! ✨</span>
+        </div>
+      </div>
+
+      <!-- Segundo post -->
+      <div class="post-insta">
+        <div class="topo-post">
+          <img src="{{ url_for('static', filename='Fotos/perfil2.jpg') }}" class="avatar-insta" alt="Avatar do usuário">
+          <span class="nome-usuario-insta">maria.tech</span>
+        </div>
+        <img src="{{ url_for('static', filename='ImagensPublicacoes/foto2.jpg') }}" class="midia-insta"
+          alt="Imagem do post">
+        <div class="acoes-insta">
+          <span>
+            <label class="heart">
+              <input type="checkbox">
+              <svg id="Layer_1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.4,4C14.6,4,13,4.9,12,6.3C11,4.9,9.4,4,7.6,4C4.5,4,2,6.5,2,9.6C2,14,12,22,12,22s10-8,10-12.4C22,6.5,19.5,4,16.4,4z">
+                </path>
+              </svg>
+            </label>
+          </span>
+          <span class="comentario-icone">
+            <button>
+              <svg stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" height="44" width="44" xmlns="http://www.w3.org/2000/svg" class="icone-comentario"
+                fill="none">
+                <path fill="none" d="M0 0h24v24H0z" stroke="none"></path>
+                <path d="M8 9h8"></path>
+                <path d="M8 13h6"></path>
+                <path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z">
+                </path>
+              </svg>
+            </button>
+          </span>
+          <div class="send-icon"><i class="fas fa-paper-plane"></i></div>
+          <span class="container">
+            <label class="salvar">
+              <input type="checkbox" checked="checked">
+              <svg class="save-regular" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                <path
+                  d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z">
+                </path>
+              </svg>
+              <svg class="save-solid" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                <path
+                  d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z">
+                </path>
+              </svg>
+            </label>
+          </span>
+        </div>
+        <div class="descricao-post">
+          <span class="nome-usuario-insta">maria.tech</span>
+          <span>Nosso evento de tecnologia foi incrível! 🚀</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUGESTÕES -->
+    <section class="sugestoes-lateral">
+      <h3>Sugestões para você</h3>
+
+      <div class="sugestao-usuario">
+        <img src="{{ url_for('static', filename='Fotos/perfil3.jpg') }}" alt="Usuário 1" class="avatar-sugestao">
+        <span class="nome-sugestao">ana_cultura</span>
+        <button class="botao-seguir">Seguir</button>
+      </div>
+
+      <div class="sugestao-usuario">
+        <img src="{{ url_for('static', filename='Fotos/perfil4.jpg') }}" alt="Usuário 2" class="avatar-sugestao">
+        <span class="nome-sugestao">lucas.dev</span>
+        <button class="botao-seguir">Seguir</button>
+      </div>
+
+      <div class="sugestao-usuario">
+        <img src="{{ url_for('static', filename='Fotos/perfil5.jpg') }}" alt="Usuário 3" class="avatar-sugestao">
+        <span class="nome-sugestao">vida_music</span>
+        <button class="botao-seguir">Seguir</button>
+      </div>
+    </section>
+  </div>
+</main>
+{% endblock %}

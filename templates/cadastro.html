@@ -1,0 +1,45 @@
+{% extends "base/base.html" %}
+{% block titulo %}Cadastro - Aliança Aurora{% endblock %}
+{% block corpo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/loginecadastro.css') }}">
+  <main>
+    <section>
+      <div class="form-container">
+        <p class="title">Crie sua conta</p>
+        <form class="form">
+          <input type="text" class="input" placeholder="Nome completo" required />
+          <input type="email" class="input" placeholder="Email ou CPF" required />
+
+          <div class="senha-container">
+            <input type="password" id="senha-cadastro" class="input" placeholder="Digite sua senha" required />
+            <button type="button" class="btn-senha" onclick="togglePassword('senha-cadastro')"></button>
+          </div>
+
+          <div class="senha-container">
+            <input type="password" id="confirmar-senha" class="input" placeholder="Confirme sua senha" required />
+            <button type="button" class="btn-senha" onclick="togglePassword('confirmar-senha')"></button>
+          </div>
+
+          <button class="form-btn" type="submit">Cadastrar</button>
+        </form>
+
+        <p class="sign-up-label">
+          Já tem uma conta?
+          <a href="/HTML/login.html" class="sign-up-link">Entrar</a>
+        </p>
+
+        <div class="buttons-container">
+          <a href="https://www.facebook.com" class="facebook-login-button">
+            <img src="{{ url_for('static', filename='Imagens/facebook.png') }}" alt="Facebook" class="facebook-icon" />
+            <span>Entrar com Facebook</span>
+          </a>
+
+          <a href="https://www.google.com" class="google-login-button">
+            <img src="{{ url_for('static', filename='Imagens/google.png') }}" alt="Google" class="google-icon" />
+            <span>Entrar com Google</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

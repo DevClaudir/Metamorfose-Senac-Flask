@@ -1,0 +1,102 @@
+.content-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 50px;
+  background-color: #ffffff;
+  /* Fundo branco */
+  border: 1px solid #cccccc;
+  /* Borda cinza clara */
+  border-radius: 4px;
+  /* Cantos levemente arredondados */
+  box-shadow: none;
+  /* Sem sombra */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Fonte profissional */
+  color: #222222;
+  /* Texto escuro para melhor leitura */
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111111;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Georgia', serif;
+  /* Fonte serifada para título */
+  letter-spacing: 0.03em;
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #999999;
+  padding-bottom: 6px;
+}
+
+.content-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.termos-lista {
+  padding-left: 25px;
+  color: #333333;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+.termos-lista li {
+  margin-bottom: 18px;
+}
+
+.content-section a {
+  color: #004080;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.content-section a:hover,
+.content-section a:focus {
+  color: #002050;
+  outline: none;
+}
+
+/* -------- RESPONSIVIDADE -------- */
+
+
+@media (max-width: 768px) {
+ .content-section {
+  max-width: 500px;
+  width: 70%;
+ }
+
+ .main-title{
+  align-items: center;
+  margin-left: 35px;
+  font-size: 15px;
+ }
+
+ h1 {
+  margin-right: 35px;
+ }
+ .content-section h2 {
+  font-size: 15px;
+ }
+
+ .content-section p {
+  font-size: 13px;
+ }
+
+ .termos-lista {
+  font-size: 12px;
+ }
+ 
+
+}

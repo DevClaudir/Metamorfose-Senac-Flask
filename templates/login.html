@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+{% block titulo %}Login - Aliança Aurora{% endblock %}
+{% block corpo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/loginecadastro.css') }}">
+    <main>
+        <section>
+            <div class="form-container2">
+                <p class="title">Bem-vindo de volta</p>
+
+                <form class="form">
+                    <input type="email" class="input" placeholder="Email">
+                    <input type="password" class="input" placeholder="Digite sua senha">
+                    <p class="page-link">
+                        <span class="page-link-label">Esqueceu a senha?</span>
+                    </p>
+                    <button class="form-btn">Entrar</button>
+                </form>
+
+
+                <p class="sign-up-label">
+                    Ainda não tem uma conta?
+                    <a href="cadastro.html" class="sign-up-link">Cadastre-se</a>
+                </p>
+                <div class="buttons-container">
+                    <a href="https://www.facebook.com" class="facebook-login-button">
+                        <img src="{{ url_for('static', filename='Imagens/facebook.png') }}" alt="Facebook"
+                            class="facebook-icon">
+                        <span>Entrar com Facebook</span>
+                    </a>
+
+                    <a href="https://www.google.com" class="google-login-button">
+                        <img src="{{ url_for('static', filename='Imagens/google.png') }}" alt="Google"
+                            class="google-icon">
+                        <span>Entrar com Google</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

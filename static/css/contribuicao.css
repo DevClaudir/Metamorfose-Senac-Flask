@@ -1,0 +1,66 @@
+.contribuicao-section {
+    padding: 40px 30px;
+    max-width: 850px;
+    margin: auto;
+    background-color: #fff9fd;
+    border-left: 8px solid #f16262;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+    transition: 0.3s ease;
+    margin-top: 50px;
+}
+
+.titulo-contribuicao {
+    font-size: 2.3rem;
+    color: #f37272;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.titulo-contribuicao i {
+    margin-right: 10px;
+    color: #f16262;
+}
+
+.contribuicao-section p {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.contribuicao-section strong {
+    color: rgb(107, 7, 7);
+}
+
+.conclusao {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #b73030;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contribuicao-section {
+        margin-bottom: 40px;
+        width: 90%;
+        padding: 25px 20px;
+        border-left: 6px solid #f16262;
+    }
+
+    .titulo-contribuicao {
+        font-size: 1.6rem;
+    }
+
+    .contribuicao-section p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .conclusao {
+        font-size: 1rem;
+    }
+}

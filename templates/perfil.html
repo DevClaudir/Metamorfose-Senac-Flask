@@ -1,0 +1,44 @@
+{% extends "base/base.html" %}
+{% block titulo %}Perfil - Aliança Aurora{% endblock %}
+{% block corpo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/perfil.css') }}">
+<main>
+    <div class="profile-container">
+      <div class="profile-header">
+        <img src="{{ url_for('static', filename='Fotos/perfil6.jpg') }}" alt="Foto de perfil" class="profile-image" />
+        <div class="profile-info">
+          <h2 class="profile-name">Clarice.dev</h2>
+          <p class="profile-bio">Desenvolvedora Back-End • Apaixonada por tecnologia e café ☕</p>
+          <div class="profile-stats-actions">
+            <div class="profile-stats">
+              <div class="stat">
+                <span class="number" id="seguidores">300</span>
+                <span class="label">Seguidores</span>
+              </div>
+              <div class="stat">
+                <span class="number">180</span>
+                <span class="label">Seguindo</span>
+              </div>
+               <div class="profile-actions">
+              <button class="follow-btn">Seguir</button>
+              <div class="icons">
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <img src="{{ url_for('static', filename='ImagensPublicacoes/publicacao1.jpg') }}" alt="foto1" />
+        <img src="{{ url_for('static', filename='ImagensPublicacoes/publicacao2.jpg') }}" alt="foto2" />
+        <img src="{{ url_for('static', filename='ImagensPublicacoes/publicacao3.jpg') }}" alt="foto3" />
+        <img src="{{ url_for('static', filename='ImagensPublicacoes/publicacao4.jpg') }}" alt="foto4" />
+        <img src="{{ url_for('static', filename='ImagensPublicacoes/publicacao5.jpg') }}" alt="foto5" />
+        <img src="{{ url_for('static', filename='ImagensPublicacoes/publicacao6.jpg') }}" alt="foto6" />
+      </div>
+    </div>
+  </main>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base/base.html" %}
+{% block titulo %}Cursos - Aliança Aurora{% endblock %}
+{% block corpo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/cursos.css') }}">
+<main>
+  <section class="cursos-header">
+    <h1>Nossos Cursos</h1>
+    <p>Transforme sua carreira com nossos cursos desenvolvidos para mulheres determinadas como você.</p>
+  </section>
+
+  <section class="cursos-grid">
+    <!-- card 1 -->
+    <div class="curso-card">
+      <img src="{{ url_for('static', filename='Fotos/pexels-divinetechygirl-1181263.jpg') }}"
+        alt="Curso de Tecnologia para Iniciantes" />
+      <div class="curso-info">
+        <h2>Tecnologia para Iniciantes</h2>
+        <p>Aprenda lógica de programação, ferramentas digitais e habilidades essenciais para o mercado tech.</p>
+        <ul>
+          <li><i class="fas fa-clock"></i> Duração: 8 semanas</li>
+          <li><i class="fas fa-signal"></i> Nível: Básico</li>
+          <li><i class="fas fa-certificate"></i> Certificado incluído</li>
+        </ul>
+        <a href="https://www.udemy.com/course/logica-de-programacao-java-python-visualg-e-javascript/?couponCode=LOCLZDOFFPBRTRMT"
+          target="_blank" class="btn-inscrever">Inscreva-se</a>
+      </div>
+    </div>
+
+    <!-- card 2 -->
+    <div class="curso-card">
+      <img src="{{ url_for('static', filename='Fotos/pexels-tima-miroshnichenko-5717509.jpg') }}"
+        alt="Curso de Liderança Feminina" />
+      <div class="curso-info">
+        <h2>Liderança Feminina</h2>
+        <p>Desenvolva habilidades de liderança, gestão de equipes e comunicação assertiva.</p>
+        <ul>
+          <li><i class="fas fa-clock"></i> Duração: 6 semanas</li>
+          <li><i class="fas fa-signal"></i> Nível: Intermediário</li>
+          <li><i class="fas fa-certificate"></i> Certificado incluído</li>
+        </ul>
+        <a href="https://www.udemy.com/course/lideranca-para-mulheres-em-10-passos/?couponCode=LOCLZDOFFPBRTRMT"
+          target="_blank" class="btn-inscrever">Inscreva-se</a>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

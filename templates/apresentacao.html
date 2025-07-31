@@ -2,32 +2,336 @@
 {% block titulo %}Apresentação pessoal - Senac{% endblock %}
 {% block corpo %}
 {% block css_pagina %}
-<link rel="stylesheet" href="{{ url_for('static', filename='CSS/apresentacao.css') }}">
-{% endblock %}<main>
-  <section class="content-section">
-    <div class="titulo-apresentacao">
-      <img src="{{ url_for('static', filename='imagens/WhatsApp Image 2025-06-22 at 1.50.51 PM (1).jpeg') }}"
-        alt="Foto pessoal" class="icone">
-      <h1 class="main-title">Apresentação Pessoal</h1>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/apresentacao.css') }}">
+{% endblock %}
+<main class="apresentacao-container">
+  <!-- Primeira pessoa -->
+  <section class="introduction">
+    <div class="about-me  ">
+      <div class="header-text">
+        <h1>Ana Ludmila</h1>
+        <p>Dev fullstack web Júnior</p>
+      </div>
+      <div class="profile-photo ">
+        <img src="https://github.com/LuluLopes.png" alt="Foto de Lud Lopes">
+      </div>
     </div>
-    <p class="lead-text">Oi! Eu sou a <strong>Ana Ludmila</strong>, tenho 18 anos e faço parte da criação da
-      <strong>Aliança Aurora</strong>, um projeto feito com muito carinho e propósito.
-    </p>
+  </section>
 
-    <p>Desde nova, percebi como ser mulher em muitos espaços, principalmente online nem sempre é fácil. A gente
-      escuta coisas que não deveria, é ignorada ou subestimada. Isso sempre me incomodou.</p>
+  <section class="about-me-narrative">
+    <h2 class="title">Sobre mim </h2>
+    <div class="narrative-content   justify">
+      <p>Escreva um textinho</p>
 
-    <p>Foi daí que surgiu a vontade de ajudar a criar algo diferente: um lugar onde mulheres se sintam seguras,
-      bem-vindas e com espaço para crescer e se conectar com outras que passam por coisas parecidas.</p>
+      <h3>Formações e skills</h3>
+      <div class="formation">
+        <h4>Técnico em Informática</h4>
+        <hr>
+        <p>Senac São Paulo</p>
+        <p>04/2024 - 08/2025 | Em andamento</p>
+        <p>Programação, banco de dados, montagem de computadores e servidores</p>
+      </div>
 
-    <p>Nas horas vagas, eu gosto de jogar, treinar, ouvir música, ler, assistir filmes e passar tempo com a minha
-      família. Essas coisas simples também fazem parte de quem eu sou.</p>
+      <h4>Front-end - Minha primeira página web</h4>
+      <hr>
+      <p>PrograMaria</p>
+      <p>05/2025 - 08/2025 | Em andamento</p>
+      <p>HTML, CSS, JavaScript, UX|UI, responsividade</p>
+    </div>
+  </section>
 
-    <p>Com a Aliança Aurora, quero fazer parte de uma mudança, mesmo que pequena. Ajudando outras mulheres a se
-      sentirem mais confiantes, respeitadas e livres para ser quem são.</p>
+  <section class="contribuition-section   ">
+    <h2 class="title">Contribuição no projeto</h2>
+    <p>Contribuir com este projeto é uma realização pessoal, pois acredito profundamente que toda mulher merece se sentir inclusa, respeitada e valorizada. Lutar por mais inclusão, equidade e representatividade feminina é um dos meus maiores objetivos.
 
-    <a href="https://mail.google.com/mail/u/0/?fs=1&to=ludmilalopes416@gmail.com&tf=cm" target="_blank"
-      class="btn-primary">Fale comigo!!</a>
+    Participei da criação de todas as páginas, da identidade visual e do desenvolvimento da marca Aliança Aurora, sempre pensando em como acolher e representar cada mulher que acessar essa plataforma.
+
+    Desde o conceito até a escolha das cores e do tom das mensagens, tudo foi pensado com cuidado, empatia e propósito. Desejo que aqui cada mulher encontre oportunidades reais, conexões verdadeiras e um espaço onde possa crescer sem medo de ser quem é.</p>
+  </section>
+
+  <section class="action-section">
+    <h2 class="title">Conecte-se comigo!</h2>
+    <div class="links-container">
+      </a>
+      <a href="https://www.linkedin.com/in/ana-ludmila-lopes-b4a0a62a5/" class="link-item">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/LuluLopes" class="link-item">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:ludmilalopes416@gmail.com" class="link-item">
+        <i class="fas fa-envelope"></i> E-mail
+      </a>
+    </div>
+  </section>
+
+  <!-- Segunda pessoa -->
+  <section class="introduction">
+    <div class="about-me  ">
+      <div class="header-text">
+        <h1>Claudir Santos Goes</h1>
+        <p>Dev fullstack Web Júnior</p>
+      </div>
+      <div class="profile-photo ">
+        <img src="https://github.com/DevClaudir.png" alt="Foto de perfil de Claudir Santos Goes">
+      </div>
+    </div>
+  </section>
+
+  <section class="about-me-narrative">
+    <h2 class="title">Sobre mim </h2>
+    <div class="narrative-content   justify">
+      <p>Tenho 18 anos, moro na cidade de Embu das artes - SP e atualmente estou concluindo o ensino técnico em
+        informática pelo Senac Osasco.</p>
+
+      <h3>Formações e skills</h3>
+      <div class="formation">
+        <h4>Novotec técnico em eletrônica</h4>
+        <hr>
+        <p>Etec Carolina Carinhato Sampaio</p>
+        <p>01/2022 - 12/2024 | Concluído</p>
+        <p>Hardware, desenho técnico, normas ABNT, sistemas elétricos e microsoldagem</p>
+      </div>
+
+      <h4>Técnico em informática</h4>
+      <hr>
+      <p>Senac Osasco</p>
+      <p>04/2024 - 08/2025 | Em andamento</p>
+      <p>Hardware, manutenção de computadores, linguagens de programação e design</p>
+    </div>
+  </section>
+
+  <section class="contribuition-section   ">
+    <h2 class="title">Contribuição no projeto</h2>
+    <p>Colaborei com minha equipe no desenvolvimento front-end da página, contribui também com a aplicação do Backend,
+      adicionando e puxando informações do banco de dados.</p>
+  </section>
+
+  <section class="action-section">
+    <h2 class="title">Conecte-se comigo</h2>
+    <div class="links-container">
+      </a>
+      <a href="https://www.linkedin.com/in/claudir-santosgoes/" class="link-item">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/DevClaudir/" class="link-item">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:claudirsantos.goes1@gmail.com" class="link-item">
+        <i class="fas fa-envelope"></i> E-mail
+      </a>
+    </div>
+  </section>
+
+  <!-- Terceira pessoa -->
+  <section class="introduction">
+    <div class="about-me  ">
+      <div class="header-text">
+        <h1>Hugo Patricio</h1>
+        <p>Dev fullstack Web Júnior</p>
+      </div>
+      <div class="profile-photo ">
+        <img src="" alt="Foto de perfil de Hugo Patricio">
+      </div>
+    </div>
+  </section>
+
+  <section class="about-me-narrative">
+    <h2 class="title">Sobre mim </h2>
+    <div class="narrative-content   justify">
+      <p>Tenho 18 anos, moro na cidade de Embu das artes - SP e atualmente estou concluindo o ensino técnico em
+        informática pelo Senac Osasco.</p>
+
+      <h3>Formações e skills</h3>
+      <div class="formation">
+        <h4>Novotec técnico em eletrônica</h4>
+        <hr>
+        <p>Etec Carolina Carinhato Sampaio</p>
+        <p>01/2022 - 12/2024 | Concluído</p>
+        <p>Hardware, desenho técnico, normas ABNT, sistemas elétricos e microsoldagem</p>
+      </div>
+
+      <h4>Técnico em informática</h4>
+      <hr>
+      <p>Senac Osasco</p>
+      <p>04/2024 - 08/2025 | Em andamento</p>
+      <p>Hardware, manutenção de computadores, linguagens de programação e design</p>
+    </div>
+  </section>
+
+  <section class="contribuition-section   ">
+    <h2 class="title">Contribuição no projeto</h2>
+    <p>Colaborei com minha equipe no desenvolvimento front-end da página, contribui também com a aplicação do Backend,
+      adicionando e puxando informações do banco de dados.</p>
+  </section>
+
+  <section class="action-section">
+    <h2 class="title">Conecte-se comigo</h2>
+    <div class="links-container">
+      </a>
+      <a href="https://www.linkedin.com/in/claudir-santosgoes/" class="link-item">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/DevClaudir/" class="link-item">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:claudirsantos.goes1@gmail.com" class="link-item">
+        <i class="fas fa-envelope"></i> E-mail
+      </a>
+    </div>
+  </section>
+
+  <!-- Quarta pessoa -->
+  <section class="introduction">
+    <div class="about-me  ">
+      <div class="header-text">
+        <h1>Heloisa</h1>
+        <p>Dev fullstack Web Júnior</p>
+      </div>
+      <div class="profile-photo ">
+        <img src="" alt="Foto de perfil de Heloisa">
+      </div>
+    </div>
+  </section>
+
+  <section class="about-me-narrative">
+    <h2 class="title">Sobre mim </h2>
+    <div class="narrative-content   justify">
+      <p>Tenho 18 anos, moro na cidade de São Paulo e atualmente estou concluindo o ensino técnico em
+        informática pelo Senac Osasco.</p>
+
+      <h3>Formações e skills</h3>
+      <div class="formation">
+      <h4>Técnico em informática</h4>
+      <hr>
+      <p>Senac Osasco</p>
+      <p>04/2024 - 08/2025 | Em andamento</p>
+      <p>Hardware, manutenção de computadores, linguagens de programação e design</p>
+    </div>
+  </section>
+
+  <section class="contribuition-section   ">
+    <h2 class="title">Contribuição no projeto</h2>
+    <p>Colaborei com minha equipe no desenvolvimento front-end da página, contribui também com a aplicação do Backend,
+      adicionando e puxando informações do banco de dados.</p>
+  </section>
+
+  <section class="action-section">
+    <h2 class="title">Conecte-se comigo</h2>
+    <div class="links-container">
+      </a>
+      <a href="https://www.linkedin.com/in/claudir-santosgoes/" class="link-item">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/DevClaudir/" class="link-item">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:claudirsantos.goes1@gmail.com" class="link-item">
+        <i class="fas fa-envelope"></i> E-mail
+      </a>
+    </div>
+  </section>
+
+  <!-- Quinta pessoa -->
+  <section class="introduction">
+    <div class="about-me  ">
+      <div class="header-text">
+        <h1>Kauan Victor</h1>
+        <p>Dev fullstack Web Júnior</p>
+      </div>
+      <div class="profile-photo ">
+        <img src="" alt="Foto de perfil de Kauan Victor">
+      </div>
+    </div>
+  </section>
+
+  <section class="about-me-narrative">
+    <h2 class="title">Sobre mim </h2>
+    <div class="narrative-content   justify">
+      <p>Tenho 18 anos, moro na cidade de São Paulo e atualmente estou concluindo o ensino técnico em
+        informática pelo Senac Osasco.</p>
+
+      <h3>Formações e skills</h3>
+      <div class="formation">
+      <h4>Técnico em informática</h4>
+      <hr>
+      <p>Senac Osasco</p>
+      <p>04/2024 - 08/2025 | Em andamento</p>
+      <p>Hardware, manutenção de computadores, linguagens de programação e design</p>
+    </div>
+  </section>
+
+  <section class="contribuition-section ">
+    <h2 class="title">Contribuição no projeto</h2>
+    <p>Colaborei com minha equipe no desenvolvimento front-end da página, contribui também com a aplicação do Backend,
+      adicionando e puxando informações do banco de dados.</p>
+  </section>
+
+  <section class="action-section">
+    <h2 class="title">Conecte-se comigo</h2>
+    <div class="links-container">
+      </a>
+      <a href="https://www.linkedin.com/in/claudir-santosgoes/" class="link-item">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/DevClaudir/" class="link-item">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:claudirsantos.goes1@gmail.com" class="link-item">
+        <i class="fas fa-envelope"></i> E-mail
+      </a>
+    </div>
+  </section>
+
+  <!-- Sexta pessoa -->
+  <section class="introduction">
+    <div class="about-me  ">
+      <div class="header-text">
+        <h1>Kauã Rodrigues</h1>
+        <p>Dev fullstack Web Júnior</p>
+      </div>
+      <div class="profile-photo ">
+        <img src="" alt="Foto de perfil de Kauã Rodrigues">
+      </div>
+    </div>
+  </section>
+
+  <section class="about-me-narrative">
+    <h2 class="title">Sobre mim </h2>
+    <div class="narrative-content   justify">
+      <p>Tenho 18 anos, moro na cidade de São Paulo e atualmente estou concluindo o ensino técnico em
+        informática pelo Senac Osasco.</p>
+
+      <h3>Formações e skills</h3>
+      <div class="formation">
+      <h4>Técnico em informática</h4>
+      <hr>
+      <p>Senac Osasco</p>
+      <p>04/2024 - 08/2025 | Em andamento</p>
+      <p>Hardware, manutenção de computadores, linguagens de programação e design</p>
+    </div>
+  </section>
+
+  <section class="contribuition-section   ">
+    <h2 class="title">Contribuição no projeto</h2>
+    <p>Colaborei com minha equipe no desenvolvimento front-end da página, contribui também com a aplicação do Backend,
+      adicionando e puxando informações do banco de dados.</p>
+  </section>
+
+  <section class="action-section">
+    <h2 class="title">Conecte-se comigo</h2>
+    <div class="links-container">
+      </a>
+      <a href="https://www.linkedin.com/in/claudir-santosgoes/" class="link-item">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/DevClaudir/" class="link-item">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:claudirsantos.goes1@gmail.com" class="link-item">
+        <i class="fas fa-envelope"></i> E-mail
+      </a>
+    </div>
   </section>
 </main>
 {% endblock %}

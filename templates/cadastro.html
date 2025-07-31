@@ -1,7 +1,7 @@
 {% extends "base/base.html" %}
 {% block titulo %}Cadastro - Aliança Aurora{% endblock %}
 {% block corpo %}
-<link rel="stylesheet" href="{{ url_for('static', filename='CSS/loginecadastro.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/cadastro_login.css') }}">
   <main>
     <section>
       <div class="form-container">
@@ -30,12 +30,12 @@
 
         <div class="buttons-container">
           <a href="https://www.facebook.com" class="facebook-login-button">
-            <img src="{{ url_for('static', filename='Imagens/facebook.png') }}" alt="Facebook" class="facebook-icon" />
+            <img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook" class="facebook-icon" />
             <span>Entrar com Facebook</span>
           </a>
 
           <a href="https://www.google.com" class="google-login-button">
-            <img src="{{ url_for('static', filename='Imagens/google.png') }}" alt="Google" class="google-icon" />
+            <img src="{{ url_for('static', filename='img/google.png') }}" alt="Google" class="google-icon" />
             <span>Entrar com Google</span>
           </a>
         </div>

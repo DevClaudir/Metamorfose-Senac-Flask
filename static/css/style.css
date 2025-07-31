@@ -52,7 +52,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--vermelho-rosado);
+    box-shadow: 0 4px 12px rgba(126, 113, 153, 0.2);
+    background-color: #FFF;
 }
 
 #logo {
@@ -61,7 +62,7 @@ header {
 }
 
 .header-link {
-    color: white;
+    color: var(--vermelho-rosado);
     text-decoration: none;
 }
 
@@ -69,9 +70,12 @@ header {
     display: flex;
     align-items: center;
     margin-left: auto;
-    /* Empurra essa área para a direita */
-    gap: 15px;
-    /* Espaçamento entre Login, Cadastro e ☰ */
+    justify-content: center;
+    gap: 1.1em;
+    margin-right: 0.5em;
+    header {
+        flex-direction: column;
+    }
 }
 
 .hamburger-label:hover {
@@ -89,7 +93,7 @@ header {
 .hamburger-icon {
     font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: var(--vermelho-medio);
     padding: 10px 20px;
     display: inline-block;
 }
@@ -112,25 +116,15 @@ header {
     display: flex;
 }
 
-/*     display: none;
-    background-color: #ffcccc;
-    padding: 10px 20px;
-    border-bottom: 2px solid #ee8282;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    width: 100%;
-    max-width: 100%;*/
-
-/* Estilo dos links do menu */
 .menu-horizontal a {
-    border-radius: 16px;
+    border-radius: 0.4em;
     text-decoration: none;
     padding: 6px 12px;
     font-size: 14px;
     font-weight: 500;
-    color: #FFF;
     transition: 0.3s ease;
+    color: var(--vermelho-rosado);
+    font-weight: bolder;
 }
 
 /*  hover nos links */
@@ -383,6 +377,7 @@ footer.rodape {
 
 /* econde o ícone hambúrguer no desktop */
 @media (min-width: 769px) {
+
     .hamburger-icon {
         display: none;
     }
@@ -395,11 +390,11 @@ footer.rodape {
 
 @media (max-width: 768px) {
     /* RESPONSIVVIDADE NAVBAR */
-
+    header {
+        flex-direction: column;
+    }
     .menu-horizontal {
         top: 60px;
-        /* mais próximo do botão */
-        background-color: #e6e4e9;
         padding: 16px 12px;
         gap: 10px;
         z-index: 1000;
@@ -407,12 +402,10 @@ footer.rodape {
         flex-direction: column;
         align-items: flex-start;
         min-width: 180px;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
     }
 
     .menu-horizontal {
         display: none;
-        background-color: #ffcccc;
         padding: 10px 20px;
         align-items: center;
         flex-wrap: wrap;
@@ -423,28 +416,13 @@ footer.rodape {
 
 
     .menu-horizontal a {
-        background: rgba(231, 76, 60, 0.61);
         border-radius: 16px;
-        border-style: solid;
-        border: 1px 1px 1px 1px white;
-        backdrop-filter: blur(1.9px);
-        -webkit-backdrop-filter: blur(1.9px);
         text-decoration: none;
         padding: 6px 12px;
         font-size: 14px;
         font-weight: 500;
         font-family: 'Inter', sans-serif;
-
-
     }
-
-    .menu-horizontal a:hover {
-        background-color: #f16262;
-        /* #382f41;*/
-        color: white;
-        transition: 0.3s ease;
-    }
-
 
     .barra-busca {
         display: flex;

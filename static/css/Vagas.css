@@ -1,5 +1,3 @@
-/* Estilização da seção de vagas */
-
 html,
 body {
     height: 100%;
@@ -347,10 +345,6 @@ video {
     transition: background-color 0.3s ease;
 }
 
-.botao-vagas:hover {
-    background-color: #8f0606;
-}
-
 .vaga-hero-video {
     flex: 1;
     min-width: 280px;
@@ -410,8 +404,7 @@ video {
 
     .vaga-hero-content p {
         font-size: 1rem;
-        color: white;
-        background-color: #a17474;
+        color: #222;
     }
 
     .botao-vagas {
@@ -421,6 +414,5 @@ video {
 
     .vaga-hero-video {
         display: none;
-        /* Oculta o vídeo para economizar espaço em telas pequenas */
     }
 }

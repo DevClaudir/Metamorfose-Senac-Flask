@@ -1,4 +1,26 @@
 @import url(https://fonts.googleapis.com/css2?family=Bytesized&family=Merienda:wght@300..900&family=Spirax&display=swap);
+
+:root {
+    --preto: #000000;
+    --vermelho-principal: #f16262;
+    --azul-destaque: #007bff;
+    --cinza-claro-fundo: #f8f9fa;
+    --cinza-claro-borda: #e9ecef;
+    --vermelho-forte: #fc4e4e;
+    --vermelho-medio: #f37272;
+    --vermelho-claro: #eee1e1;
+    --vermelho-claro-rgb: rgb(243, 97, 97);
+    --azul-claro: aliceblue;
+    --vermelho-escuro: rgb(148, 13, 13);
+    --vermelho-rosado: #ff9292;
+    --vermelho-acento: #fc5656;
+    --gradiente-vermelho-claro-final: #f8c8c8;
+    --vermelho-suave: #f98080;
+    --sombra-cinza: rgba(0, 0, 0, 0.575);
+    --branco: #ffffff;
+    --borda-botao-secundario: #6c757d;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,27 +43,16 @@ body {
     background-color: #ebe2e2;
 }
 
-h1,
-h2 {
-}
-
 main {
     flex: 1;
     /* ocupa o espaço entre header e footer */
-}
-
-:root {
-    --rosa-forte: #f37272;
-    --rosa-claro: white;
-    --link-hover-color: #3f4050;
-    --rosa-shadow: rgb(107, 7, 7);
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--rosa-forte);
+    background-color: var(--vermelho-rosado);
 }
 
 #logo {
@@ -94,11 +105,11 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    width: 100%; 
+    width: 100%;
 }
 
 .container-links-menu {
-    display: flex; 
+    display: flex;
 }
 
 /*     display: none;
@@ -113,26 +124,18 @@ header {
 
 /* Estilo dos links do menu */
 .menu-horizontal a {
-    background: rgba(231, 76, 60, 0.61);
     border-radius: 16px;
-    border-style: solid;
-    border: 1px 1px 1px;
-    backdrop-filter: blur(1.9px);
-    -webkit-backdrop-filter: blur(1.9px);
     text-decoration: none;
     padding: 6px 12px;
     font-size: 14px;
     font-weight: 500;
-    font-family: 'Inter', sans-serif;
-    color: #150550ab;
+    color: #FFF;
+    transition: 0.3s ease;
 }
 
 /*  hover nos links */
 .menu-horizontal a:hover {
-    background-color: #f16262;
-    /* #382f41;*/
-    color: white;
-    transition: 0.3s ease;
+    transform: translateY(-0.3em);
 }
 
 
@@ -192,7 +195,6 @@ header {
 */
 /* NOVO BANNER */
 .hero {
-    background: linear-gradient(to right, #f7acac, #ffcccc);
     text-align: center;
     padding: 80px 20px;
     border-radius: 12px;
@@ -202,7 +204,7 @@ header {
 
 .hero-content h1 {
     font-size: 2.6rem;
-    color: #6d6a6a;
+    color: #333;
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -273,8 +275,8 @@ header {
 /* RODAPE */
 
 footer.rodape {
-    background-color: var(--menu-bg-color);
-    color: var(--menu-text-color);
+    background-color: var(--gradiente-vermelho-claro-final);
+    color: #FFF;
     padding: 50px 20px;
     font-family: 'Inter', sans-serif;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.219);
@@ -299,7 +301,8 @@ footer.rodape {
 .coluna-title i,
 .coluna a i {
     margin-right: 8px;
-    color: #cfc4eb;
+    color: var(--vermelho-forte);
+
 }
 
 .coluna-title {
@@ -308,22 +311,22 @@ footer.rodape {
     font-weight: bold;
     font-size: 1.1rem;
     margin-bottom: 12px;
-    color: #f3edff;
+    color: var(--vermelho-forte);
+
 }
 
 .coluna a {
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #e6dfff;
+    color: var(--vermelho-forte);
     text-decoration: none;
     font-size: 0.95rem;
-    transition: color 0.3s ease;
+    transition: 0.5s ease;
 }
 
 .coluna a:hover {
-    color: #ffffff;
-    text-decoration: underline;
+    transform: translateY(-0.3em);
 }
 
 

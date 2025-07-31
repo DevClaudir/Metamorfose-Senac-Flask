@@ -232,9 +232,8 @@ video {
 /* seção de Vagas */
 
 .vagas {
-    background: linear-gradient(to right, #f37272, #db5252);
+    background: rgba(0,0,0, 0.03);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 40px 30px;
     margin: 50px auto;
     max-width: 1200px;
@@ -243,7 +242,7 @@ video {
 .titulo-vagas {
     text-align: center;
     font-size: 26px;
-    color: whitesmoke;
+    color: #222;
     margin-bottom: 30px;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
@@ -262,7 +261,6 @@ video {
     flex-direction: column;
     justify-content: space-between;
     background-color: #e7e3e3ab;
-    border: 1px solid white;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -277,8 +275,9 @@ video {
 
 .vaga-titulo {
     font-size: 15px;
-    color: white;
+    color: #fc4e4e;
     margin-bottom: 8px;
+    font-weight: bold;
 }
 
 .vaga-empresa,
@@ -290,7 +289,7 @@ video {
 
 .botao-candidatar {
     align-self: flex-start;
-    background-color: #6b0707;
+    background-color: #f98080;
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
@@ -308,7 +307,6 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, #c43636, #c76262);
     padding: 60px 40px;
     border-radius: 12px;
     margin: 40px auto 0;
@@ -324,7 +322,7 @@ video {
 
 .vaga-hero-content h1 {
     font-size: 2.5rem;
-    color: white;
+    color: #222;
     margin-bottom: 15px;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
@@ -332,14 +330,14 @@ video {
 
 .vaga-hero-content p {
     font-size: 1.1rem;
-    color: #cfcbcb;
+    color: #333;
     margin-bottom: 25px;
     max-width: 500px;
     line-height: 1.6;
 }
 
 .botao-vagas {
-    background-color: #6b0707;
+    background-color: #f98080;
     color: #fff;
     padding: 12px 24px;
     border-radius: 8px;

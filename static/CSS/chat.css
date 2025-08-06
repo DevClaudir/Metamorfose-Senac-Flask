@@ -1,0 +1,98 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.chat-container {
+    background-color: white;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chat-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff9292;
+    text-align: center;
+}
+
+.chat-box {
+    background-color: rgba(243, 114, 114, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mensagem {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 75%;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.mensagem.psicologo {
+    background-color: whitesmoke;
+    align-self: flex-start;
+    color: #333;
+}
+
+.mensagem.usuario {
+    background-color: #c9f0dc;
+    align-self: flex-end;
+    color: #222;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 0.95rem;
+}
+
+.chat-input button {
+    background-color: #dbdbdb;
+    color: #f37272;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
+    border: none;
+    border-radius: 0.8em;
+    padding: 10px 20px;
+    cursor: not-allowed;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 80%;
+        height: 400px;
+    }
+
+    .mensagem.psicologo, .mensagem.usuario {
+        font-size: 12px;
+    }
+
+    .chat-box {
+        padding: 20px;
+    }
+
+
+   
+    #sendButton {
+        padding: 12px 20px;
+    }
+}

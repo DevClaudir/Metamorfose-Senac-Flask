@@ -1,0 +1,38 @@
+{% extends "base/base.html" %}
+{% block titulo %}Sobre - Aliança Aurora{% endblock %}
+{% block corpo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/sobre.css') }}">
+<main>
+    <section class="sobre-section">
+      <h1 class="titulo-sobre">Sobre Nós</h1>
+
+      <p class="texto-intro">
+        A <strong>Aliança Aurora</strong> é uma rede criada <!-- qm dera kkkk - por mulheres-->para mulheres. Nosso
+        objetivo é simples: abrir
+        caminhos, criar oportunidades e fortalecer quem muitas vezes não se sente ouvida.
+      </p>
+
+      <div class="missao-visao-valores">
+        <div class="item">
+          <h2>Missão</h2>
+          <p>Incluir, apoiar e inspirar mulheres a conquistarem seu espaço com autonomia, segurança e autoestima.</p>
+        </div>
+        <div class="item">
+          <h2>Visão</h2>
+          <p>Ser um espaço referência para mulheres que buscam crescimento, comunidade e visibilidade.</p>
+        </div>
+        <div class="item">
+          <h2>Valores</h2>
+          <p>Respeito, empatia, sororidade, liberdade e oportunidades reais.</p>
+        </div>
+      </div>
+
+      <p>
+        Aqui, cada mulher é bem-vinda do jeito que é. Acreditamos no poder da união e da representatividade para mudar
+        vidas. Porque juntas, somos mais fortes.
+      </p>
+
+      <a href="{{ url_for('contato') }}" class="btn-primary">Fale Conosco</a>
+    </section>
+  </main>
+{% endblock %}

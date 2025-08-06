@@ -1,0 +1,89 @@
+/* Reset e estrutura */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebe2e2;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+/* Título da página */
+.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Container principal do formulário */
+.perfil-form-container {
+    max-width: 300px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Estilo dos labels */
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 4px;
+    font-family: 'Inter', sans-serif;
+    display: inline-block;
+}
+
+/* Inputs */
+.form-control {
+    border-radius: 20px;
+    border: 1px solid #c0c0c0;
+    outline: 0 !important;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+/* Botão de envio */
+.form-submit-btn {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #f37272;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-submit-btn:active {
+    box-shadow: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .perfil-form-container {
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+    }
+}

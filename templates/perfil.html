@@ -1,0 +1,69 @@
+{% extends "base/base.html" %}
+{% block titulo %}Perfil de {{ current_user.username }}{% endblock %}
+{% block corpo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/perfil.css') }}">
+<main class="perfil-wrapper">
+  <section class="perfil-topo">
+    {% if user_profile and user_profile.profile_pic != 'default.jpg' %}
+      <img src="{{ url_for('arquivocarregado', arquivo=user_profile.profile_pic) }}" class="perfil-foto" alt="Foto de perfil">
+    {% else %}
+      <div class="perfil-foto-placeholder">{{ current_user.username[0]|upper }}</div>
+    {% endif %}
+    
+    <div class="perfil-info">
+      <h2 class="perfil-nome">{{ name }}</h2>
+      <p class="perfil-bio">
+        {% if user_profile and user_profile.bio %}
+          {{ user_profile.bio }}
+        {% else %}
+          Sem bio ainda.
+        {% endif %}
+      </p>
+
+        <div class="perfil-controles">
+          {% if current_user.is_authenticated %}
+            {% if current_user.id == user.id %}
+              <a href="{{ url_for('criar_perfil') }}" class="btn-editar">Editar Perfil</a>
+            {% else %}
+              <form method="POST" action="#">
+                <button type="submit" class="btn-seguir">Seguir</button>
+              </form>
+            {% endif %}
+          {% endif %}
+        </div>
+
+
+      <div class="perfil-stats">
+        <span><strong>300</strong> seguidores</span>
+        <span><strong>180</strong> seguindo</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="postagens">
+    {% if user_posts %}
+      <div class="galeria-postagens">
+        {% for post in user_posts %}
+          <div class="post-item">
+            
+            <img src="{{ url_for('arquivocarregado', arquivo=post.imagem) }}" alt="Postagem de {{ post.title }}">
+            <div class="post-hover">
+             
+              <p class="post-titulo">{{ post.title }}</p>
+                {% if current_user.is_authenticated and current_user.id == post.author.id %}
+              <a href="{{ url_for('editar_post', post_id=post.id) }}" class="btn-editar-post">Editar</a>
+              <a href="{{ url_for('post_delete', post_id=post.id) }}" class="btn-excluir-post">Excluir</a>
+
+              {% else %}
+              <a href="#" class="btn-delete">Visualizar</a>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="sem-postagens">Você ainda não tem nenhuma postagem.</p>
+    {% endif %}
+  </section>
+</main>
+{% endblock %}

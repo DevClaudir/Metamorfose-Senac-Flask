@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    {% block css_pagina %}{% endblock %}
+    <title>{% block titulo %}Aliança Aurora{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <a href="{{ url_for('index') }}"><img id="logo"
+                src="{{ url_for('static', filename='img/logo-alianca-aurora.png') }}" alt="Logo" /></a>
+        <div id="menuHorizontal" class="menu-horizontal">
+            <a href="{{ url_for('index') }}" role="button">Home</a>
+            <a href="{{ url_for('feed') }}" role="button">Feed</a>
+            <a href="{{ url_for('cursos') }}" role="button">Cursos</a>
+            {% if current_user.is_authenticated %}
+            <a href="{{ url_for('perfil', user_id=current_user.id) }}">Meu Perfil</a>
+            {% else %}
+            <a href="{{ url_for('login') }}">Meu Perfil</a>
+            {% endif %}
+            <a href="{{ url_for('vagas') }}" role="button">Vagas</a>
+            <a href="{{ url_for('chat') }}" role="button">Atendimento</a>
+             {% if request.endpoint == 'feed' %}
+                <a href="{{ url_for('postar') }}" role="button">Nova Postagem</a>
+             {% endif %}
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('logout') }}" role="button">Sair</a>
+            {% endif %}
+
+
+            <div class="barra-busca">
+                <input type="text" placeholder="Buscar" />
+                <button class="botao-buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="area-menu">
+            <a href="{{ url_for('cadastro') }}" class="header-link">Cadastro</a>
+            <a href="{{ url_for('login') }}" class="header-link">Login</a>
+            <span class="hamburger-icon" onclick="toggleMenu()">☰</span>
+        </div>
+    </header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="container mt-4">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    {% block corpo %}
+    {% endblock %}
+    <footer class="rodape">
+        <div class="rodape-container">
+            <div class="coluna">
+                <div class="coluna-title">Projeto</div>
+                <p><a href="{{ url_for('apresentacao') }}"><i class="fas fa-user-circle"></i> Apresentação Pessoal</a>
+                </p>
+            </div>
+
+            <div class="coluna">
+                <div class="coluna-title"> Institucional</div>
+                <p><a href="{{ url_for('sobre') }}"><i class="fas fa-info-circle"></i> Sobre Nós</a></p>
+                <p><a href="{{ url_for('contato') }}"><i class="fas fa-envelope"></i> Contato</a></p>
+            </div>
+            <div class="coluna">
+                <div class="coluna-title"> Legal</div>
+                <p><a href="{{ url_for('politica') }}"><i class="fas fa-user-secret"></i> Política de Privacidade</a>
+                </p>
+                <p><a href="{{ url_for('termos') }}"><i class="fas fa-file-contract"></i> Termos de Uso</a></p>
+            </div>
+
+            <div class="coluna">
+                <div class="coluna-title">Parceiros</div>
+                <p><a href="https://www.sp.senac.br/senac-osasco" target="_blank"><i class="fas fa-school"></i> Senac</a></p>
+            </div>
+        </div>
+        <script src="/static/js/index.js"></script>
+    </footer>

@@ -1,0 +1,39 @@
+{% extends "base/base.html" %}
+{% block titulo %}Aliança Aurora - Senac{% endblock %}
+{% block corpo %}
+{% block css_pagina %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/index.css') }}">
+{% endblock %}
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Conectamos Mulheres ao Sucesso</h1>
+            <p>Desenvolva sua carreira, aprenda com especialistas e encontre oportunidades exclusivas para você.</p>
+            <a href="{{ url_for('cadastro') }}" class="btn-hero">Crie sua conta gratuita</a>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="beneficios">
+        <div class="beneficio-card">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Cursos Profissionais</h3>
+            <p>Aprenda com especialistas e eleve seu currículo.</p>
+        </div>
+        <div class="beneficio-card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Vagas Exclusivas</h3>
+            <p>Encontre oportunidades pensadas para você.</p>
+        </div>
+        <div class="beneficio-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h3>Rede de Apoio</h3>
+            <p>Compartilhe experiências com outras mulheres e cresça junto.</p>
+        </div>
+    </section>
+</main>
+</body>
+
+</html>
+{% endblock %}

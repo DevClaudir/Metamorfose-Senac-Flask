@@ -1,0 +1,45 @@
+{% extends "base/base.html" %}
+{% block titulo %}Criar postagem{% endblock %}
+{% block corpo %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/postar.css') }}">
+
+    <body>
+    <main class="container-postagens">
+        <section class="form-container card shadow-lg p-4">
+            {% if post %} 
+            <h2 class="card-title text-center mb-4">Editar Publicação</h2>
+            {% else %}
+            <h2 class="card-title text-center mb-4">Criar Publicação</h2>
+            {% endif %}
+            <form method="POST" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                
+                <div class="mb-3">
+                    {{ form.title.label(class="form-label") }}
+                    {{ form.title(class="form-control", placeholder="Titulo da publicação") }}
+          
+                </div>
+
+                <div class="mb-3">
+                    {{ form.imagem.label(class="form-label") }}
+                    {{ form.imagem(class="form-control") }}
+                </div>
+
+                <div class="mb-4">
+                    {{ form.descricao.label(class="form-label") }}
+                    {{ form.descricao(class="form-control", rows="5", placeholder="Escreva a descrição...") }}
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-descartar me-md-2" onclick="window.location.href='{{ url_for('index') }}'">
+                        <i class="bi bi-x-circle me-1"></i> Descartar
+                    </button>
+
+                    {{ form.submit(class="btn btn-primary btn-postar") }}
+                </div>
+            </form>
+        </section>
+    </main>
+    </body>
+{% endblock %}
+

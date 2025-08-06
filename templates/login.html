@@ -1,0 +1,36 @@
+{% extends "base/base.html" %}
+{% block titulo %}Login - Aliança Aurora{% endblock %}
+{% block corpo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/cadastro_login.css') }}">
+    <main>
+        <section>
+            <div class="form-container">
+                <p class="title">Bem-vindo de volta</p>
+                <form class="form" method="POST">
+                    {{form.hidden_tag()}}
+                    <div>
+                        {{form.email.label(class="form-label")}}
+                        {{form.email(class="input", placeholder="Digite seu email")}}
+                    </div>
+                    <div class="senha-container">
+                        {{form.password.label(class="form-label")}}
+                        {{form.password(class="input", placeholder="Digite sua senha")}}
+                    </div>
+                    <p class="page-link">
+                        <span class="page-link-label">Esqueceu a senha?</span>
+                    </p>
+                    <div>
+                        {{form.submit(class="form-btn")}}
+                    </div>
+                </form>
+
+
+                <p class="sign-up-label">
+                    Ainda não tem uma conta?
+                    <a href="{{ url_for('cadastro') }}" class="sign-up-link">Cadastro</a>
+                </p>
+                
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base/base.html" %}
+{% block titulo %}Vagas - Aliança Aurora{% endblock %}
+{% block corpo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/Vagas.css') }}">
+<main>
+    <section class="vaga-hero">
+      <div class="vaga-hero-content">
+        <h1>Explore Oportunidades Profissionais</h1>
+        <p>Descubra vagas alinhadas com o seu perfil e dê o próximo passo na sua carreira.</p>
+        <a href="#vagas-destaque" class="botao-vagas">Ver Vagas</a>
+      </div>
+
+      <div class="vaga-hero-video">
+        <video autoplay muted loop playsinline>
+          <source src="{{ url_for('static', filename='img/3255275-uhd_3840_2160_25fps.mp4') }}" type="video/mp4" />
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+    </section>
+
+    <section class="vagas" id="vagas-destaque">
+      <h3 class="titulo-vagas">Vagas em Destaque</h3>
+      <div class="vagas-container">
+        <div class="vaga-card">
+          <h2 class="vaga-titulo">Dev Back-End Java SR</h2>
+          <p class="vaga-empresa">Empresa: Bradesco</p>
+          <p class="vaga-localizacao">Local: Barueri, SP</p>
+          <a href="https://bradesco.csod.com/ux/ats/careersite/1/home/requisition/65326?c=bradesco&sq=req65326&source=LinkedIn"
+            target="_blank" class="botao-candidatar">Candidatar-se</a>
+        </div>
+        <div class="vaga-card">
+          <h2 class="vaga-titulo">Designer UI/UX</h2>
+          <p class="vaga-empresa">Empresa: Growth - Negócios Digitais</p>
+          <p class="vaga-localizacao">Local: Lapa, SP</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSem5gZvzY-rmR6MS9GWhNLDEMJVMXVxXncqhVx85m85IidhVg/viewform?pli=1"
+            target="_blank" class="botao-candidatar">Candidatar-se</a>
+        </div>
+        <div class="vaga-card">
+          <h2 class="vaga-titulo">Analista de Dados</h2>
+          <p class="vaga-empresa">Empresa: iFood</p>
+          <p class="vaga-localizacao">Local: Osasco, SP</p>
+          <a href="https://carreiras.ifood.com.br/job/7952032002/" target="_blank" class="botao-candidatar">Candidatar-se</a>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

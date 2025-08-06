@@ -1,0 +1,212 @@
+/* GERAL */
+body {
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CONTAINER PRINCIPAL */
+.perfil-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* TOPO DO PERFIL */
+.perfil-topo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.perfil-foto {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #dbdbdb;
+}
+
+.perfil-foto-placeholder {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+}
+
+/* INFORMAÇÕES DO PERFIL */
+.perfil-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perfil-nome {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.perfil-bio {
+  color: #555;
+  font-size: 1em;
+}
+
+.perfil-controles .btn-editar {
+  padding: 6px 14px;
+  background-color: #f37272;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9em;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.btn-editar:hover {
+    background-color: #f15a5a;
+    transform: translateY(-0.1em);
+}
+
+.btn-seguir {
+  padding: 6px 14px;
+  background-color: #262626;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-seguir:hover {
+  background-color: #000;
+}
+
+.perfil-stats {
+  display: flex;
+  gap: 25px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+/* GALERIA DE POSTAGENS */
+.postagens {
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+}
+
+.galeria-postagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+}
+
+.post-item {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.post-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.post-item:hover img {
+  opacity: 0.9;
+}
+
+.post-hover {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.post-titulo {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+/* Botão Editar */
+.btn-editar-post {
+  color: white;
+  background-color: #7c5dc6;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85em;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  border: none;
+}
+
+.btn-editar-post:hover {
+  background-color: #3a0ba8;
+}
+
+/* Botão Excluir */
+.btn-excluir-post {
+  color: white;
+  background-color: #dc3545;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85em;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  border: none;
+  margin-left: 5px;
+}
+
+.btn-excluir-post:hover {
+  background-color: #bb2d3b;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .perfil-topo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .perfil-stats {
+    justify-content: center;
+  }
+
+  .perfil-controles {
+    text-align: center;
+  }
+}
+
+.sem-postagens {
+  text-align: center;
+  color: #999;
+  font-size: 1em;
+  margin-top: 30px;
+}

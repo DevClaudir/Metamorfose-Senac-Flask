@@ -1,0 +1,29 @@
+{% extends "base/base.html" %}
+{% block titulo %}Termos - Aliança Aurora{% endblock %}
+{% block corpo %}
+  <main>
+    <section class="content-section">
+      <h1 class="main-title">Termos de Uso</h1>
+      <p>Ao utilizar a plataforma <strong>Aliança Aurora</strong>, você concorda com os seguintes termos e condições:
+      </p>
+
+      <ol class="termos-lista">
+        <li><strong>Uso da Plataforma:</strong> É proibido o uso indevido dos recursos oferecidos, incluindo conteúdos
+          ofensivos ou ilegais.</li>
+        <li><strong>Cadastro e Segurança:</strong> O usuário é responsável por manter seus dados de acesso seguros e
+          atualizados.</li>
+        <li><strong>Propriedade Intelectual:</strong> Todos os textos, imagens e recursos são de propriedade da
+          plataforma e não podem ser reproduzidos sem autorização.</li>
+        <li><strong>Modificações:</strong> Podemos alterar estes termos a qualquer momento. Recomendamos que revise
+          esta
+          página periodicamente.</li>
+        <li><strong>Encerramento de Conta:</strong> Podemos suspender contas que violem estas condições, sem aviso
+          prévio.</li>
+      </ol>
+
+      <p>Se tiver dúvidas sobre esses termos, entre em contato conosco através da página de <a
+          href="{{ url_for('contato') }}">Contato</a>.</p>
+
+    </section>
+  </main>
+{% endblock %}

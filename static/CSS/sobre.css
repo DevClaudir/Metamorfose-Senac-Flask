@@ -1,0 +1,162 @@
+.sobre-section {
+  background-color: #fff;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c2c2c;
+  text-align: left;
+}
+
+.titulo-sobre {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f37272;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #f37272;
+  padding-bottom: 8px;
+  max-width: fit-content;
+}
+
+
+
+.texto-intro {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+.texto-intro {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+
+.missao-visao-valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 35px;
+  justify-content: space-between;
+}
+
+.missao-visao-valores .item {
+  flex: 1 1 280px;
+  background-color: rgba(243, 114, 114, 0.15);
+  border-radius: 10px;
+  padding: 25px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease;
+}
+
+.missao-visao-valores .item:hover {
+  transform: translateY(-0.3em);
+}
+
+
+.missao-visao-valores h2 {
+  color: #f37272;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.missao-visao-valores p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #3c3c3c;
+}
+
+.sobre-section p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #3b3b3b;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #6b0707;
+  color: white;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #8f0606;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .missao-visao-valores {
+    flex-direction: column;
+  }
+
+  .sobre-section {
+    padding: 50px;
+    margin: 30px 15px;
+  }
+
+  .titulo-sobre {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto 25px auto;
+  }
+
+  .texto-intro {
+    font-size: 1.05rem;
+    text-align: justify;
+    margin-bottom: 25px;
+  }
+
+  .missao-visao-valores {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item {
+    width: 100%;
+    min-height: 160px;
+    max-height: 200px;
+    padding: 25px 20px;
+  }
+
+  .item p {
+    font-size: 1rem;
+  }
+
+  .missao-visao-valores .item {
+    padding: 20px 16px;
+  }
+
+  .missao-visao-valores h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .missao-visao-valores p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .sobre-section p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .btn-primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
